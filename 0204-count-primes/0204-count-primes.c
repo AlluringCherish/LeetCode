@@ -8,8 +8,8 @@ int countPrimes(int n) {
         }
     }
     
-    for (int z=2; z<n ; z++){
-        if (!IsPrime[z]){
+    for (int i=2; i<n ; i++){
+        if (!IsPrime[i]){
             count++;
         }
     }

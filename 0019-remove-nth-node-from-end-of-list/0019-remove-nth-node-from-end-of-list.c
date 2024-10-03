@@ -13,7 +13,6 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
         if (temp1) NumNode++;
         temp1 = temp1->next;
     }
-    printf("%d",NumNode);
     if (NumNode == 1) {
         head = NULL;
 

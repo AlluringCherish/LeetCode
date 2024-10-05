@@ -6,14 +6,11 @@ int minSubArrayLen(int target, int* nums, int numsSize) {
     for (;j<numsSize;j++){
         sum+=nums[j];
         while (sum >= target){
-
             if (min > j-i+1){
                 min = j-i+1;
             }
-            
             sum -=nums[i];
             i++;
-            
         }
     }
         

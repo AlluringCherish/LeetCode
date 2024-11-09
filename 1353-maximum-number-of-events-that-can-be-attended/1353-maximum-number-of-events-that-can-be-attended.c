@@ -53,6 +53,7 @@ int heap_pop(){
     return value;
 }
 
+
 int maxEvents(int** events, int eventsSize, int* eventsColSize) {
     for (int i=0; i<100001;i++){
         heap[i]=0;
@@ -70,31 +71,22 @@ int maxEvents(int** events, int eventsSize, int* eventsColSize) {
         }
     }
     
-    
     int index=0;
-    
     for (int j=1 ; j<=maxDay; j++){
-        
         while(index < eventsSize && events[index][0]==j){
             heap_insert(events[index][1]);
             index++;
         }
-        
         while(size>0 && heap[1]<j){
             heap_pop();
         }
-        
         
         if (size>0){
             heap_pop();
             answer++;
         }
         
-        
     }
-    
     return answer;
-    
-    
     
 }

@@ -1,5 +1,5 @@
 #include <stdlib.h>
-/*
+/* Solution1: minheap
 int heap[100001];
 int size;
 int compare(const void *a, const void *b){
@@ -89,6 +89,7 @@ int minGroups(int** intervals, int intervalsSize, int* intervalsColSize) {
 }
 */
 
+//solution2 : mapping
 int map[1000002];
 int minGroups(int** intervals, int intervalsSize, int* intervalsColSize) {
     for (int i=0; i<1000002; i++){

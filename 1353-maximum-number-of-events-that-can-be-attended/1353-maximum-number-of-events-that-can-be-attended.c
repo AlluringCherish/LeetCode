@@ -62,8 +62,6 @@ int maxEvents(int** events, int eventsSize, int* eventsColSize) {
     qsort(events,eventsSize,sizeof(int*),compare);
     
     int answer = 0;
-    int check=0;
-    
     int maxDay=0;
     for (int i = 0; i < eventsSize; i++) {
         if (events[i][1] > maxDay) {

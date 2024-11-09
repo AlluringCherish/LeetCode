@@ -1,5 +1,6 @@
-#include <stdlib.h>
+
 /* Solution1: minheap
+#include <stdlib.h>
 int heap[100001];
 int size;
 int compare(const void *a, const void *b){

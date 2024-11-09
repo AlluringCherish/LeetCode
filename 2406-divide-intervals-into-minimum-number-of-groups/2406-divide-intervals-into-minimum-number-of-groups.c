@@ -1,8 +1,7 @@
 #include <stdlib.h>
-
+/*
 int heap[100001];
 int size;
-
 int compare(const void *a, const void *b){
     
     int *m=*(int **)a;
@@ -87,4 +86,31 @@ int minGroups(int** intervals, int intervalsSize, int* intervalsColSize) {
     
     
     return size;
+}
+*/
+
+int map[1000002];
+int minGroups(int** intervals, int intervalsSize, int* intervalsColSize) {
+    for (int i=0; i<1000002; i++){
+        map[i]=0;
+    }
+    
+    for (int i=0; i<intervalsSize; i++){
+        map[intervals[i][0]]++;
+        map[intervals[i][1]+1]--;
+    }
+    
+    int cur = 0, max=0;
+    
+    for (int i=0; i<1000002; i++){
+        if (map[i]){
+            cur+=map[i];
+            if (max < cur){
+                max = cur;
+            }
+        }
+        
+    }
+    
+    return max;
 }

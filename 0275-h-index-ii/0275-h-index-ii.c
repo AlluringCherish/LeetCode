@@ -1,4 +1,4 @@
-/* Sol1: Time Complexity is O(n)
+/* Sol1: linear search // Time Complexity is O(n)
 int hIndex(int* citations, int citationsSize) {
     // Time Complexity is O(n)
     int i=citationsSize-1;
@@ -15,7 +15,7 @@ int hIndex(int* citations, int citationsSize) {
 
 
 
-
+//Sol2: binary Search // Time Complexity is O(n)
 int hIndex(int* citations, int citationsSize) {
     int l=0, r=citationsSize-1,ans=0;
     while(l<=r){

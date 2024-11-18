@@ -37,6 +37,8 @@ int search(int* nums, int numsSize, int target) {
     
 }
 */
+
+//Sol2 : Linear Search // Time complexity = O(N)
 int search(int* nums, int numsSize, int target) {
     int result= -1;
     if (nums[0]==target){

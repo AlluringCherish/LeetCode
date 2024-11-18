@@ -1,3 +1,4 @@
+/* Sol1 : Binary search // Time complexity = O(logn)
 int search(int* nums, int numsSize, int target) {
     int l=0, r=numsSize-1;
     
@@ -34,4 +35,40 @@ int search(int* nums, int numsSize, int target) {
     
     return -1;
     
+}
+*/
+int search(int* nums, int numsSize, int target) {
+    int result= -1;
+    if (nums[0]==target){
+        result = 0;
+    }
+    
+    else if (nums[numsSize-1]==target){
+        result = (numsSize-1);
+    }
+    
+    else if (nums[0] > target){
+        for (int i=numsSize-1; i>0; i--){
+            if (nums[i]==target){
+                result = i;
+            }
+            
+            else if ((nums[i-1]>nums[i]) || (target > nums[i])){
+                break;
+            }
+        }
+    }
+    
+    else {
+        for (int i=1; i<(numsSize-1); i++){
+            if (nums[i]==target){
+                result = i;
+            }
+            
+            else if (nums[i+1]<nums[i] || target < nums[i]){
+                break;
+            }
+        }
+    }
+    return result;
 }

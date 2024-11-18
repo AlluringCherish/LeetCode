@@ -21,13 +21,13 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
             continue;
         }
         
-        if ((i<nums1Size && j>0)&& nums1[i]<nums2[j-1]){
+        if ((i<nums1Size )&& nums1[i]<nums2[j-1]){
             l=i+1;
             continue;
         }
         
         
-        if ((i>0 && j<nums2Size)&& nums1[i-1]>nums2[j]){
+        if ((i>0)&& nums1[i-1]>nums2[j]){
             r=i-1;
             continue;
         }

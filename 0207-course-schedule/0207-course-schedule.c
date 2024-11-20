@@ -60,9 +60,7 @@ bool canFinish(int numCourses, int** prerequisites, int prerequisitesSize, int* 
     
     
     for (int i=0; i<numCourses;i++){
-        if(!visited[i]){
-            dfs(i,numCourses);
-        }
+        dfs(i,numCourses);
         if (result==1){
             return 0;
         }

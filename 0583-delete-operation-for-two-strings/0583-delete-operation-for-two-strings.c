@@ -1,6 +1,6 @@
 #include <string.h>
 #define max(a,b) ((a)>(b) ? (a):(b))
-int dp[501][501]; // word1의 i번쨰까지, word2의 j번째까지 substring의 길이
+int dp[501][501]; // word1의 i번쨰까지, word2의 j번째까지 subsequence의 길이
 
 int minDistance(char* word1, char* word2) {
     int a= strlen(word1), b= strlen(word2);
